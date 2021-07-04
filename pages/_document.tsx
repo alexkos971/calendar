@@ -11,7 +11,7 @@ class AppDocument extends Document {
     return (
       <Html>
         <Head>
-            <link rel="icon" href="https://image.flaticon.com/icons/png/512/2948/2948239.png"/>
+            <link rel="icon" href="/static/calendar.png"/>
 
             {/* Fonts */}
             <link rel="preconnect" href="https://fonts.googleapis.com" />
