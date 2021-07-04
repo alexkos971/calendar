@@ -1,0 +1,104 @@
+.calendar_box {
+    width: 60%;
+    display: block;
+    background-color: #fff;
+    padding-bottom: 60px;
+}
+
+.header {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 20px;
+
+    img {
+        width: 20px;
+        cursor: pointer;
+    }
+
+    h1 {
+        color: #714ffa;
+        font-weight: bold;
+        font-size: 50px;
+        font-family: Segoe UI, serif;
+        white-space: nowrap;
+        margin: 0px 15px;
+    }
+}
+
+.weekDays {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px !important;
+    padding-bottom: 20px;
+    border-bottom: .7px solid rgb(226, 226, 226);
+
+    ul {
+        width: 90%;
+        justify-content: space-between;
+        text-align: center;
+        list-style: none;
+        position: relative;
+        font-family: 'Century Gothic', sans-serif;
+        letter-spacing: 2px;
+        padding-left: 0;
+        margin: 0 auto;
+        display: flex;
+        color: #80dfaf;
+        font-weight: 100;
+        font-size: 20px;
+    }
+}
+
+.monthData {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    margin-top: 30px;
+    grid-row-gap: 45px;
+    color: rgb(109, 109, 109);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    
+    .week {
+        width: 95%;
+        margin: 0 auto;
+        display: grid;
+
+        grid-column-gap: initial;
+        grid-template-columns: repeat(7, 1fr);
+        text-align: center;
+        animation: calendar .3s ease-in; 
+
+        @keyframes calendar {
+            from {
+                width: 50%;
+            }
+            to {
+                width: 95%;
+            }
+        }
+
+        .day {
+            cursor: pointer;
+
+        }
+
+        .today {
+            background-color: #714ffa;
+            // border-radius: 50%;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .selectedDay {
+            // border-radius: 50%;
+            color: #80dfaf;
+            cursor: pointer;
+        }
+    }
+}
+

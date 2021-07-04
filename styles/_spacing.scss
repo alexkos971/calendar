@@ -1,0 +1,47 @@
+$sides: (
+    'left': 'l',
+    'top': 't',
+    'bottom': 'b',
+    'right': 'r',
+);
+
+@each $side, $letter in $sides {
+    @for $px  from 0 through 10 {
+        .m#{$letter}-#{$px * 5} {
+            margin-#{$side}: #{$px * 5}px !important; 
+        }
+
+        .p#{$letter}-#{$px * 5} {
+            padding-#{$side}: #{$px * 5}px !important; 
+        }
+    }
+} 
+
+.ta-c {
+    text-align: center;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+.jc-c {
+    justify-content: center;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-block {
+    display: block;
+} 
+
+.m-auto {
+    margin: 0 auto;
+}
+
+.cup {
+    cursor: pointer;
+}
+

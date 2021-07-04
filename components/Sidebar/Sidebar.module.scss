@@ -1,0 +1,69 @@
+.sidebar {
+    width: 40%;
+    background-color: #714ffa;
+    display: block;
+    position: relative;
+    left: 0%;
+    font-family: 'Century Gothic', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 2px;
+    padding: 30px 0px 60px;
+}
+
+.weather {
+    width: 60%;
+    height: auto;
+    position: relative;
+    margin-top: 7%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
+    img {
+        width: 120px;
+        height: auto;
+        margin-bottom: 12px;
+        position: relative;
+    }
+    
+    h1 {
+        font-size: 27px;
+        font-weight: 400;
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 15px;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        display: block;
+        position: relative;
+        font-weight: normal;
+        word-wrap: normal;
+
+    }
+
+    p {
+        font-size: 10px;
+        font-weight: 100;
+        text-decoration: underline;
+        cursor: pointer;
+        // margin-top: 10px;
+    }
+}
+
+.tasks {
+    width: 86%;
+    position: relative;
+    display: block;
+    top: 30px;
+    margin: 0 auto !important;
+
+    h4 {
+        font-size: 14px;
+        font-weight: normal;
+    }
+}

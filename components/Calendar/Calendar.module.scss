@@ -1,0 +1,12 @@
+.calendar {
+    width: 1100px;
+    height: auto;
+    position: relative;
+    margin: 5% auto 0;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 2px 2px 15px -4px rgba(0, 0, 0, 75%);
+    // border: 1px solid #000;
+}
