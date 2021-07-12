@@ -3,6 +3,12 @@
     display: block;
     background-color: #fff;
     padding-bottom: 60px;
+    -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;     
 }
 
 .header {
@@ -95,9 +101,28 @@
         }
 
         .selectedDay {
-            // border-radius: 50%;
-            color: #80dfaf;
+            background-color: #80dfaf;
             cursor: pointer;
+            z-index: 4;
+            
+            &--first {
+                background-color: #80dfaf;
+                border-radius: 20px 0px 0px 20px;
+            }  
+            
+            &--last {
+                background-color: #80dfaf;
+                border-radius: 0px 20px 20px 0px;
+            }
+            
+            &--single {
+                background-color: #80dfaf;
+                border-radius: 20px;
+            }
+            &--center {
+                background-color: #80dfaf;
+                // border-radius: 20px;
+            }
         }
     }
 }

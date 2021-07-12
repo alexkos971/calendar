@@ -49,10 +49,10 @@ export const getMonthData = (year, month) => {
 
         for (let k = 0; k < DAYS_ON_WEEK; k++) {
             if ((i === 0 && k < monthStartOn) || day > daysInMonth) {
-                result[i][k] = null;
+                result[i][k] = {date: null};
             }
             else {
-                result[i][k] = new Date(year, month, day++);
+                result[i][k] = {date: new Date(year, month, day++), selected: false};
             }
         }
     }

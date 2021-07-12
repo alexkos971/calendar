@@ -5,12 +5,40 @@ import styles from "./Sidebar.module.scss";
 import Axios from "axios";
 import { key } from "../../config/default.json";
 
+import Tasks from "../Tasks";
+
 // interface SidebarProps {
 //     data: Object<Object>
 // }
 
 const Sidebar: React.FC = () => {
     const [weather, setWeather] = React.useState(null)
+    const [data, setData] = React.useState([
+        {
+            "time": "09:00",
+            "text": "Send a messasge"
+        },
+        {
+            "time": "02:20",
+            "text": "Sed a messasge"
+        },
+        {
+            "time": "22:00",
+            "text": "Sesge"
+        },
+        {
+            "time": "19:00",
+            "text": " messasge"
+        },
+        {
+            "time": "19:00",
+            "text": " messasge"
+        },
+        {
+            "time": "19:00",
+            "text": " messasge"
+        },
+    ])
 
     React.useEffect(() => {
         (async () => {
@@ -26,7 +54,6 @@ const Sidebar: React.FC = () => {
               const {data} = await Axios.get(`//api.openweathermap.org/data/2.5/weather?lat=${crd.latitude}&lon=${crd.longitude}&appid=${key}`)
   
               if (data) {
-                  console.log(data)
                   setWeather({
                       temp: Math.ceil((data.main.temp) - 273.14),
                       description: (data.weather[0].description).toUpperCase(),
@@ -68,9 +95,7 @@ const Sidebar: React.FC = () => {
                 }
             </div>
 
-            <div className={styles.tasks}>
-                <h4>You tasks today:</h4>
-            </div>
+                <Tasks data={data} setData={setData}/>
         </div>
     )
 }
